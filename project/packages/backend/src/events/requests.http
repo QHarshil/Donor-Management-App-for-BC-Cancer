@@ -1,0 +1,43 @@
+### Get all events
+GET http://localhost:3000/events
+
+### Create an event
+POST http://localhost:3000/events
+content-type: application/json
+
+{
+  "name": "cxz",
+  "description": "description",
+  "addressLine1": "fvcx",
+  "addressLine2": "frefg",
+  "city": "sdcx",
+  "date": "2021-12-12",
+  "donorIds": [1, 2, 3, 4, 5]
+}
+
+### Update an event
+PATCH http://localhost:3000/events/1
+content-type: application/json
+
+{
+  "city": "new city"
+}
+
+### DELETE an event
+DELETE http://localhost:3000/events/1
+
+### GET change history of an event
+GET http://localhost:3000/events/1/history
+
+### UPDATE status of donors in an event
+PATCH http://localhost:3000/events/1/donors
+content-type: application/json
+
+{
+  "donorIds": [4],
+  "newStatus": "invited",
+  "comment": "Contacted via phonesss"
+}
+
+### GET all donors of an event
+GET http://localhost:3000/events/1/donors

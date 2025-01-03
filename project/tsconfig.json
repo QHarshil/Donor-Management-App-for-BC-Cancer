@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@bc-cancer/shared": ["packages/shared/dist"]
+    },
+    "composite": true
+  },
+  "references": [
+    { "path": "./packages/frontend" },
+    { "path": "./packages/backend" },
+    { "path": "./packages/shared" }
+  ]
+}
